@@ -1,0 +1,182 @@
+[
+    {
+        "id": "reverse-a-string",
+        "title": "Reverse a String",
+        "description": "Write a function that reverses a string.",
+        "difficulty": "Easy",
+        "points": 50,
+        "solution": "def reverse_string(s):\n    return s[::-1]",
+        "instructions": "Write a function that takes a string as input and returns the reversed string."
+    },
+    {
+        "id": "factorial",
+        "title": "Factorial",
+        "description": "Write a function to compute the factorial of a number.",
+        "difficulty": "Easy",
+        "points": 50,
+        "solution": "def factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n - 1)",
+        "instructions": "Write a function that takes a number and returns its factorial."
+    },
+    {
+        "id": "fizzbuzz",
+        "title": "FizzBuzz",
+        "description": "Write a function that prints numbers from 1 to 100, but for multiples of 3 print 'Fizz' and for multiples of 5 print 'Buzz'.",
+        "difficulty": "Easy",
+        "points": 50,
+        "solution": "def fizz_buzz():\n    for i in range(1, 101):\n        output = ''\n        if i % 3 == 0:\n            output += 'Fizz'\n        if i % 5 == 0:\n            output += 'Buzz'\n        print(output or i)",
+        "instructions": "Write a function that prints numbers from 1 to 100. For multiples of 3, print 'Fizz'. For multiples of 5, print 'Buzz'. For multiples of both, print 'FizzBuzz'."
+    },
+    {
+        "id": "palindrome",
+        "title": "Check Palindrome",
+        "description": "Write a function to check if a string is a palindrome.",
+        "difficulty": "Easy",
+        "points": 50,
+        "solution": "def is_palindrome(s):\n    return s == s[::-1]",
+        "instructions": "Write a function that checks if a string is a palindrome (same forwards and backwards)."
+    },
+    {
+        "id": "sum-of-digits",
+        "title": "Sum of Digits",
+        "description": "Write a function to calculate the sum of digits of a number.",
+        "difficulty": "Easy",
+        "points": 50,
+        "solution": "def sum_of_digits(n):\n    return sum(int(digit) for digit in str(n))",
+        "instructions": "Write a function that takes a number as input and returns the sum of its digits."
+    },
+    {
+        "id": "max-of-array",
+        "title": "Max of an Array",
+        "description": "Write a function to find the maximum value in an array.",
+        "difficulty": "Easy",
+        "points": 50,
+        "solution": "def max_of_array(arr):\n    return max(arr)",
+        "instructions": "Write a function that takes an array and returns the maximum value in it."
+    },
+    {
+        "id": "remove-duplicates",
+        "title": "Remove Duplicates",
+        "description": "Write a function to remove duplicates from an array.",
+        "difficulty": "Easy",
+        "points": 50,
+        "solution": "def remove_duplicates(arr):\n    return list(set(arr))",
+        "instructions": "Write a function that takes an array and returns a new array with duplicates removed."
+    },
+    {
+        "id": "merge-sorted-arrays",
+        "title": "Merge Sorted Arrays",
+        "description": "Write a function to merge two sorted arrays.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "def merge_sorted_arrays(arr1, arr2):\n    return sorted(arr1 + arr2)",
+        "instructions": "Write a function that merges two sorted arrays into one sorted array."
+    },
+    {
+        "id": "rotate-array",
+        "title": "Rotate an Array",
+        "description": "Write a function to rotate an array by k steps.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "def rotate_array(arr, k):\n    k = k % len(arr)\n    return arr[-k:] + arr[:-k]",
+        "instructions": "Write a function that rotates an array by k steps to the right."
+    },
+    {
+        "id": "longest-substring",
+        "title": "Longest Substring Without Repeating Characters",
+        "description": "Write a function to find the length of the longest substring without repeating characters.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "def longest_substring(s):\n    seen = set()\n    longest = 0\n    left = 0\n    for right in range(len(s)):\n        while s[right] in seen:\n            seen.remove(s[left])\n            left += 1\n        seen.add(s[right])\n        longest = max(longest, right - left + 1)\n    return longest",
+        "instructions": "Write a function that finds the length of the longest substring without repeating characters in a string."
+    },
+    {
+        "id": "anagram-check",
+        "title": "Check Anagrams",
+        "description": "Write a function to check if two strings are anagrams.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "def are_anagrams(str1, str2):\n    return sorted(str1) == sorted(str2)",
+        "instructions": "Write a function that checks if two strings are anagrams of each other."
+    },
+    {
+        "id": "matrix-transpose",
+        "title": "Matrix Transpose",
+        "description": "Write a function to transpose a matrix.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "def transpose(matrix):\n    return [list(row) for row in zip(*matrix)]",
+        "instructions": "Write a function that transposes a given matrix (rows become columns and vice versa)."
+    },
+    {
+        "id": "sum-of-subarrays",
+        "title": "Sum of Subarrays",
+        "description": "Write a function to compute the sum of all possible subarrays.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "def sum_of_subarrays(arr):\n    total_sum = 0\n    for i in range(len(arr)):\n        subarray_sum = 0\n        for j in range(i, len(arr)):\n            subarray_sum += arr[j]\n            total_sum += subarray_sum\n    return total_sum",
+        "instructions": "Write a function that calculates the sum of all possible subarrays in a given array."
+    },
+    {
+        "id": "find-minimum-in-rotated-array",
+        "title": "Find Minimum in Rotated Array",
+        "description": "Write a function to find the minimum in a rotated sorted array.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "def find_min_in_rotated_array(arr):\n    left, right = 0, len(arr) - 1\n    while left < right:\n        mid = (left + right) // 2\n        if arr[mid] > arr[right]:\n            left = mid + 1\n        else:\n            right = mid\n    return arr[left]",
+        "instructions": "Write a function that finds the minimum value in a rotated sorted array."
+    },
+    {
+        "id": "find-nth-fibonacci",
+        "title": "Nth Fibonacci Number",
+        "description": "Write a function to find the nth Fibonacci number.",
+        "difficulty": "Hard",
+        "points": 150,
+        "solution": "def nth_fibonacci(n):\n    if n <= 1:\n        return n\n    return nth_fibonacci(n - 1) + nth_fibonacci(n - 2)",
+        "instructions": "Write a function that returns the nth Fibonacci number using recursion."
+    },
+    {
+        "id": "binary-search",
+        "title": "Binary Search",
+        "description": "Write a function to implement binary search.",
+        "difficulty": "Hard",
+        "points": 150,
+        "solution": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1",
+        "instructions": "Write a function that implements binary search on a sorted array."
+    },
+    {
+        "id": "knapsack-problem",
+        "title": "Knapsack Problem",
+        "description": "Solve the knapsack problem using dynamic programming.",
+        "difficulty": "Hard",
+        "points": 150,
+        "solution": "def knapsack(weights, values, capacity):\n    dp = [[0] * (capacity + 1) for _ in range(len(values) + 1)]\n    for i in range(1, len(values) + 1):\n        for w in range(capacity + 1):\n            if weights[i - 1] <= w:\n                dp[i][w] = max(dp[i - 1][w], dp[i - 1][w - weights[i - 1]] + values[i - 1])\n            else:\n                dp[i][w] = dp[i - 1][w]\n    return dp[len(values)][capacity]",
+        "instructions": "Write a function to solve the knapsack problem using dynamic programming."
+    },
+    {
+        "id": "merge-k-sorted-lists",
+        "title": "Merge K Sorted Lists",
+        "description": "Write a function to merge k sorted linked lists into one sorted list.",
+        "difficulty": "Hard",
+        "points": 150,
+        "solution": "def merge_k_sorted_lists(lists):\n    merged = []\n    for lst in lists:\n        merged.extend(lst)\n    return sorted(merged)",
+        "instructions": "Write a function that merges k sorted linked lists into one sorted list."
+    },
+    {
+        "id": "quick-sort",
+        "title": "Quick Sort",
+        "description": "Implement the quicksort algorithm.",
+        "difficulty": "Hard",
+        "points": 150,
+        "solution": "def quick_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[-1]\n    left = [x for x in arr[:-1] if x < pivot]\n    right = [x for x in arr[:-1] if x >= pivot]\n    return quick_sort(left) + [pivot] + quick_sort(right)",
+        "instructions": "Write a function that implements the quicksort algorithm to sort an array."
+    },
+    {
+        "id": "n-queens-problem",
+        "title": "N-Queens Problem",
+        "description": "Solve the N-Queens problem using backtracking.",
+        "difficulty": "Hard",
+        "points": 150,
+        "solution": "def solve_n_queens(n):\n    solutions = []\n    board = [['.' for _ in range(n)] for _ in range(n)]\n    def is_valid(row, col):\n        for i in range(row):\n            if board[i][col] == 'Q':\n                return False\n            if col - (row - i) >= 0 and board[i][col - (row - i)] == 'Q':\n                return False\n            if col + (row - i) < n and board[i][col + (row - i)] == 'Q':\n                return False\n        return True\n    def solve(row):\n        if row == n:\n            solutions.append([''.join(r) for r in board])\n            return\n        for col in range(n):\n            if is_valid(row, col):\n                board[row][col] = 'Q'\n                solve(row + 1)\n                board[row][col] = '.'\n    solve(0)\n    return solutions",
+        "instructions": "Write a function that solves the N-Queens problem using backtracking and returns all possible solutions."
+    }
+]

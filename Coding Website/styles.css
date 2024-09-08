@@ -1,0 +1,295 @@
+/* Navbar */
+.navbar {
+    background-color: #007bff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.active-nav {
+    color: #ffc107 !important;
+}
+
+.navbar .nav-link {
+    color: rgb(42, 42, 42);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #ffc107;
+}
+
+.container-fluid {
+    padding: 10px 80px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .container-fluid {
+        padding: 0 20px;
+    }
+
+    .line {
+        border-top: 1px solid black;
+    }
+
+    .nav-item {
+        text-align: center;
+    }
+}
+
+/* End of Navbar */
+
+
+/* Content */
+body {
+    background-color: #e9f5f9;
+    font-family: Arial, sans-serif;
+}
+
+/* Flexbox alignment to center text and icon */
+.btn-group .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.btn {
+    margin-top: auto;
+    /* Push the button to the bottom */
+}
+
+.lord-icon {
+    margin-left: 10px;
+}
+
+/* Hover effect for button that also affects the icon */
+.btn:hover .lord-icon {
+    transform: scale(1.2);
+    /* Enlarge icon on hover */
+    transition: transform 0.3s ease;
+    /* Smooth transition */
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+.card {
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    .card-body {
+        text-align: center;
+    }
+
+    .card-title {
+        padding-top: 10px;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+.fade-out {
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+    opacity: 1;
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 100;
+    background-color: #ffc107;
+}
+
+#scroll-to-top.show {
+    display: block;
+}
+
+
+/* Spinner Container */
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+}
+
+/* Bootstrap Spinner */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border: 0.25em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spinner-border 0.75s linear infinite;
+}
+
+@keyframes spinner-border {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* End of Content */
+
+
+/* Footer */
+footer {
+    background-color: #141414;
+    color: #f1f1f1;
+}
+
+footer h5 {
+    font-weight: bold;
+    color: #ffc107;
+}
+
+footer a {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffc107;
+    text-decoration: underline;
+}
+
+footer .btn-floating {
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    line-height: 30px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+footer .btn-floating:hover {
+    background-color: #ffc107;
+    color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+    footer .container {
+        text-align: center;
+    }
+
+    footer .row {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    footer .row {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .col-lg-4 {
+        margin-bottom: 20px;
+    }
+}
+
+/* End of Footer */
