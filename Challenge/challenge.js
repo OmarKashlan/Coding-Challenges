@@ -89,49 +89,48 @@ document.addEventListener('DOMContentLoaded', async function () {
         return;
     }
 
-runCodeButton.addEventListener('click', function () {
-    const code = editor.getValue();
-    document.getElementById('output').innerText = "Running your code...";
+    runCodeButton.addEventListener('click', function () {
+        const code = editor.getValue();
+        document.getElementById('output').innerText = "Running your code...";
 
-    if (language === 'javascript') {
-        try {
-            const result = new Function(code)();  // هنا يتم تشغيل كود JavaScript
-            document.getElementById('output').innerText = result || "Code executed successfully!";
-        } catch (error) {
-            document.getElementById('output').innerText = `Error: ${error.message}`;
-        }
-    } else if (language === 'html') {
-        document.getElementById('output').innerHTML = code;
+        // التحقق من اللغة
+        if (language === 'javascript') {
+            // عرض نافذة منبثقة بأن JavaScript تحت الصيانة
+            alert('عذرًا، لغة JavaScript حاليًا تحت الصيانة. يرجى المحاولة لاحقًا.');
+            return;  // عدم تشغيل الكود بعد عرض الرسالة
 
-        fetch(jsonFile)
-            .then(response => response.json())
-            .then(challenges => {
-                const challenge = challenges.find(c => c.id === challengeId);
-                if (challenge) {
-                    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
-                    if (!loggedInUser) {
-                        alert('يجب عليك تسجيل الدخول لاستكمال التحديات.');
-                        return;
-                    }
+        } else if (language === 'html') {
+            document.getElementById('output').innerHTML = code;
 
-                    let userCompletedChallenges = JSON.parse(localStorage.getItem(`completedChallenges_${loggedInUser.name}`)) || {};
-                    if (!userCompletedChallenges[challengeId]) {
-                        if (code.trim() === challenge.solution.trim()) {
-                            alert('الحل الصحيح!');
-                            addPointsToUser(challenge.points);
-                            userCompletedChallenges[challengeId] = true;
-                            localStorage.setItem(`completedChallenges_${loggedInUser.name}`, JSON.stringify(userCompletedChallenges));
-                        } else {
-                            alert('الحل غير صحيح. يرجى المحاولة مرة أخرى.');
+            fetch(jsonFile)
+                .then(response => response.json())
+                .then(challenges => {
+                    const challenge = challenges.find(c => c.id === challengeId);
+                    if (challenge) {
+                        const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+                        if (!loggedInUser) {
+                            alert('يجب عليك تسجيل الدخول لاستكمال التحديات.');
+                            return;
                         }
-                    } else {
-                        alert('لقد قمت بالفعل بحل هذا التحدي. لن يتم منحك أي نقاط إضافية.');
+
+                        let userCompletedChallenges = JSON.parse(localStorage.getItem(`completedChallenges_${loggedInUser.name}`)) || {};
+                        if (!userCompletedChallenges[challengeId]) {
+                            if (code.trim() === challenge.solution.trim()) {
+                                alert('الحل الصحيح!');
+                                addPointsToUser(challenge.points);
+                                userCompletedChallenges[challengeId] = true;
+                                localStorage.setItem(`completedChallenges_${loggedInUser.name}`, JSON.stringify(userCompletedChallenges));
+                            } else {
+                                alert('الحل غير صحيح. يرجى المحاولة مرة أخرى.');
+                            }
+                        } else {
+                            alert('لقد قمت بالفعل بحل هذا التحدي. لن يتم منحك أي نقاط إضافية.');
+                        }
                     }
-                }
-            })
-            .catch(error => console.error('Error loading challenges:', error));
-    }
-});
+                })
+                .catch(error => console.error('Error loading challenges:', error));
+        }
+    });
 
 
     // وظيفة عرض الحل
