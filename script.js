@@ -23,7 +23,7 @@ function filterChallenges(difficulty) {
 
 // تحميل التحديات من ملف JSON بناءً على اللغة المختارة
 document.addEventListener("DOMContentLoaded", function () {
-    let selectedLanguage = "python"; // اللغة الافتراضية هي python
+    let selectedLanguage = "javascript"; // اللغة الافتراضية هي javascript
     const languageSelect = document.getElementById("languageSelect");
     const challengeList = document.getElementById("challengeList");
     const loadingSpinner = document.getElementById("loadingSpinner"); // الـ Spinner

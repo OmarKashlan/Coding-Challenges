@@ -23,6 +23,10 @@
 
 .container-fluid {
     padding: 10px 80px;
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: center !important;
 }
 
 @media (max-width: 768px) {
@@ -121,6 +125,15 @@ body {
         margin-bottom: 1rem;
     }
 
+    .btn-group{
+        position: relative;
+        display: inline-flex;
+        vertical-align: middle;
+        flex-wrap: wrap;
+    }
+
+
+    
     .card-body {
         text-align: center;
     }
