@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <p class="card-text">${challenge.description}</p>
                                 <p class="text-muted"><strong>Difficulty:</strong> <span class="${difficultyClass}">${challenge.difficulty}</span></p>
                                 <p><strong>Points:</strong> ${challenge.points}</p>
-                                 <a href="/Coding-Challenges/challenge/challenge.html?challenge=${challenge.id}&lang=${language}" class="btn btn-primary" style="display: flex;align-items: center;justify-content: center;">Start Challenge
+                                 <a href="/Coding-Challenges/Challenge/challenge.html?challenge=${challenge.id}&lang=${language}" class="btn btn-primary" style="display: flex;align-items: center;justify-content: center;">Start Challenge
         <lord-icon lord-icon src="https://cdn.lordicon.com/yhwigecd.json" trigger="loop" state="loop-cycle"
             colors="primary:#121331,secondary:#ffffff" style="width:25px;height:25px;margin-left:10px;">
         </lord-icon></a>
