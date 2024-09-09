@@ -1,10 +1,6 @@
 // بيانات تجريبية للمتصدرين
 const leaderboardData = [
-    { user: 'Alice', points: 1500 },
-    { user: 'Bob', points: 1200 },
-    { user: 'Charlie', points: 1000 },
-    { user: 'David', points: 800 },
-    { user: 'Eve', points: 600 }
+    { user: 'لا يوجد بيانات حالياً', points: 0 }
 ];
 
 // تحميل المتصدرين عند تحميل الصفحة
