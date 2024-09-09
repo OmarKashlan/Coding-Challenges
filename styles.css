@@ -34,6 +34,10 @@
         padding: 1rem;
     }
 
+    .padding-bottom {
+        margin-top: 20px;
+    }
+
     .container-fluid {
         padding: 0 20px;
     }
@@ -125,7 +129,7 @@ body {
         margin-bottom: 1rem;
     }
 
-    .btn-group{
+    .btn-group {
         position: relative;
         display: inline-flex;
         vertical-align: middle;
@@ -133,7 +137,7 @@ body {
     }
 
 
-    
+
     .card-body {
         text-align: center;
     }
