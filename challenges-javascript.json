@@ -198,5 +198,175 @@
         "solution": "function minutesToSeconds(minutes) {\n    return minutes * 60;\n}\n\nlet result = minutesToSeconds(5);  \n document.getElementById('output').innerText = result;",
         "instructions": "Write a function that takes minutes as input and returns the equivalent in seconds.",
         "expectedResult": "300"
+    },
+    {
+        "id": "find-factorial",
+        "title": "Find Factorial",
+        "description": "Write a function that returns the factorial of a number.",
+        "difficulty": "Hard",
+        "points": 20,
+        "solution": "function findFactorial(n) {\n    return (n === 0) ? 1 : n * findFactorial(n - 1);\n}\n\nlet result = findFactorial(5);  \n document.getElementById('output').innerText = result;",
+        "instructions": "Write a function that takes a number as input and returns its factorial.",
+        "expectedResult": "120"
+    },
+    {
+        "id": "check-palindrome",
+        "title": "Check Palindrome",
+        "description": "Write a function that checks if a string is a palindrome.",
+        "difficulty": "Medium",
+        "points": 20,
+        "solution": "function isPalindrome(s) {\n    const cleaned = s.replace(/[^A-Za-z0-9]/g, '').toLowerCase();\n    return cleaned === cleaned.split('').reverse().join('');\n}\n\nlet result = isPalindrome('madam');  \n document.getElementById('output').innerText = result;",
+        "instructions": "Write a function that takes a string as input and returns True if it is a palindrome, otherwise False.",
+        "expectedResult": "True"
+    },
+    {
+        "id": "find-longest-word",
+        "title": "Find Longest Word",
+        "description": "Write a function that finds the longest word in a string.",
+        "difficulty": "Medium",
+        "points": 20,
+        "solution": "function findLongestWord(s) {\n    return s.split(' ').reduce((longest, word) => word.length > longest.length ? word : longest, '');\n}\n\nlet result = findLongestWord('I love programming');  \n document.getElementById('output').innerText = result;",
+        "instructions": "Write a function that takes a string as input and returns the longest word.",
+        "expectedResult": "'programming'"
+    },
+    {
+        "id": "find-prime-numbers",
+        "title": "Find Prime Numbers",
+        "description": "Write a function that returns all prime numbers up to a given number.",
+        "difficulty": "Hard",
+        "points": 20,
+        "solution": "function findPrimes(n) {\n    const primes = [];\n    for (let i = 2; i <= n; i++) {\n        if (isPrime(i)) primes.push(i);\n    }\n    return primes;\n}\n\nfunction isPrime(num) {\n    for (let i = 2; i < num; i++) {\n        if (num % i === 0) return false;\n    }\n    return num > 1;\n}\n\nlet result = findPrimes(10);  \n document.getElementById('output').innerText = result;",
+        "instructions": "Write a function that takes a number as input and returns all prime numbers up to that number.",
+        "expectedResult": "[2, 3, 5, 7]"
+    },
+    {
+        "id": "fibonacci-sequence",
+        "title": "Generate Fibonacci Sequence",
+        "description": "Write a function that generates the Fibonacci sequence up to a given number.",
+        "difficulty": "Hard",
+        "points": 20,
+        "solution": "function fibonacci(n) {\n    const sequence = [0, 1];\n    for (let i = 2; i < n; i++) {\n        sequence.push(sequence[i - 1] + sequence[i - 2]);\n    }\n    return sequence;\n}\n\nlet result = fibonacci(6);  \n document.getElementById('output').innerText = result;",
+        "instructions": "Write a function that takes a number as input and returns the Fibonacci sequence up to that number.",
+        "expectedResult": "[0, 1, 1, 2, 3, 5]"
+    },
+    {
+        "id": "find-greatest-common-divisor",
+        "title": "Find Greatest Common Divisor",
+        "description": "Write a function that finds the greatest common divisor (GCD) of two numbers.",
+        "difficulty": "Hard",
+        "points": 20,
+        "solution": "function findGCD(a, b) {\n    while (b !== 0) {\n        let temp = b;\n        b = a % b;\n        a = temp;\n    }\n    return a;\n}\n\nlet result = findGCD(56, 98);  \n document.getElementById('output').innerText = result;",
+        "instructions": "Write a function that takes two numbers as input and returns their GCD.",
+        "expectedResult": "14"
+    },
+    {
+        "id": "convert-fahrenheit-to-celsius",
+        "title": "Convert Fahrenheit to Celsius",
+        "description": "Write a function that converts Fahrenheit to Celsius.",
+        "difficulty": "Medium",
+        "points": 20,
+        "solution": "function fahrenheitToCelsius(f) {\n    return (f - 32) * 5/9;\n}\n\nlet result = fahrenheitToCelsius(32);  \n document.getElementById('output').innerText = result;",
+        "instructions": "Write a function that takes temperature in Fahrenheit as input and returns it in Celsius.",
+        "expectedResult": "0"
+    },
+    {
+        "id": "calculate-perimeter-of-rectangle",
+        "title": "Calculate Perimeter of a Rectangle",
+        "description": "Write a function that calculates the perimeter of a rectangle.",
+        "difficulty": "Medium",
+        "points": 20,
+        "solution": "function rectanglePerimeter(length, width) {\n    return 2 * (length + width);\n}\n\nlet result = rectanglePerimeter(4, 5);  \n document.getElementById('output').innerText = result;",
+        "instructions": "Write a function that takes the length and width of a rectangle as input and returns its perimeter.",
+        "expectedResult": "18"
+    },
+    {
+        "id": "find-smallest-number-in-list",
+        "title": "Find Smallest Number in a List",
+        "description": "Write a function that finds the smallest number in a list.",
+        "difficulty": "Medium",
+        "points": 20,
+        "solution": "function findSmallestInList(arr) {\n    return Math.min(...arr);\n}\n\nlet result = findSmallestInList([3, 5, 7, 2, 8]);  \n document.getElementById('output').innerText = result;",
+        "instructions": "Write a function that takes a list as input and returns the smallest number.",
+        "expectedResult": "2"
+    },
+    {
+        "id": "find-largest-number-in-list",
+        "title": "Find Largest Number in a List",
+        "description": "Write a function that finds the largest number in a list.",
+        "difficulty": "Medium",
+        "points": 20,
+        "solution": "function findLargestInList(arr) {\n    return Math.max(...arr);\n}\n\nlet result = findLargestInList([3, 5, 7, 2, 8]);  \n document.getElementById('output').innerText = result;",
+        "instructions": "Write a function that takes a list as input and returns the largest number.",
+        "expectedResult": "8"
+    },
+    {
+        "id": "sum-of-even-numbers",
+        "title": "Sum of Even Numbers",
+        "description": "Write a function that returns the sum of all even numbers in a list.",
+        "difficulty": "Medium",
+        "points": 20,
+        "solution": "function sumOfEvenNumbers(arr) {\n    return arr.filter(n => n % 2 === 0).reduce((a, b) => a + b, 0);\n}\n\nlet result = sumOfEvenNumbers([1, 2, 3, 4]);  \n document.getElementById('output').innerText = result;",
+        "instructions": "Write a function that takes a list as input and returns the sum of all even numbers.",
+        "expectedResult": "6"
+    },
+    {
+        "id": "convert-hours-to-minutes",
+        "title": "Convert Hours to Minutes",
+        "description": "Write a function that converts hours to minutes.",
+        "difficulty": "Easy",
+        "points": 20,
+        "solution": "function hoursToMinutes(hours) {\n    return hours * 60;\n}\n\nlet result = hoursToMinutes(3);  \n document.getElementById('output').innerText = result;",
+        "instructions": "Write a function that takes hours as input and returns the equivalent in minutes.",
+        "expectedResult": "180"
+    },
+    {
+        "id": "calculate-circle-circumference",
+        "title": "Calculate Circle Circumference",
+        "description": "Write a function that calculates the circumference of a circle.",
+        "difficulty": "Medium",
+        "points": 20,
+        "solution": "function circleCircumference(radius) {\n    return 2 * Math.PI * radius;\n}\n\nlet result = circleCircumference(7);  \n document.getElementById('output').innerText = result;",
+        "instructions": "Write a function that takes the radius of a circle as input and returns its circumference.",
+        "expectedResult": "43.982297150257104"
+    },
+    {
+        "id": "calculate-simple-interest",
+        "title": "Calculate Simple Interest",
+        "description": "Write a function that calculates the simple interest.",
+        "difficulty": "Medium",
+        "points": 20,
+        "solution": "function calculateSimpleInterest(p, r, t) {\n    return (p * r * t) / 100;\n}\n\nlet result = calculateSimpleInterest(1000, 5, 2);  \n document.getElementById('output').innerText = result;",
+        "instructions": "Write a function that takes principal, rate, and time as input and returns the simple interest.",
+        "expectedResult": "100"
+    },
+    {
+        "id": "convert-kilometers-to-miles",
+        "title": "Convert Kilometers to Miles",
+        "description": "Write a function that converts kilometers to miles.",
+        "difficulty": "Easy",
+        "points": 20,
+        "solution": "function kilometersToMiles(km) {\n    return km * 0.621371;\n}\n\nlet result = kilometersToMiles(5);  \n document.getElementById('output').innerText = result;",
+        "instructions": "Write a function that takes kilometers as input and returns the equivalent in miles.",
+        "expectedResult": "3.106855"
+    },
+    {
+        "id": "check-vowel-or-consonant",
+        "title": "Check Vowel or Consonant",
+        "description": "Write a function that checks if a letter is a vowel or consonant.",
+        "difficulty": "Easy",
+        "points": 20,
+        "solution": "function checkVowelOrConsonant(char) {\n    return /[aeiou]/i.test(char) ? 'Vowel' : 'Consonant';\n}\n\nlet result = checkVowelOrConsonant('a');  \n document.getElementById('output').innerText = result;",
+        "instructions": "Write a function that takes a letter as input and returns 'Vowel' if it is a vowel, otherwise 'Consonant'.",
+        "expectedResult": "'Vowel'"
+    },
+    {
+        "id": "find-second-largest-number",
+        "title": "Find Second Largest Number",
+        "description": "Write a function that finds the second largest number in a list.",
+        "difficulty": "Medium",
+        "points": 20,
+        "solution": "function findSecondLargest(arr) {\n    const sorted = [...new Set(arr)].sort((a, b) => b - a);\n    return sorted[1];\n}\n\nlet result = findSecondLargest([1, 2, 3, 4, 5]);  \n document.getElementById('output').innerText = result;",
+        "instructions": "Write a function that takes a list as input and returns the second largest number.",
+        "expectedResult": "4"
     }
 ]
