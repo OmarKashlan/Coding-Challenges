@@ -5,7 +5,7 @@
         "description": "Write a function that adds two numbers together.",
         "difficulty": "Easy",
         "points": 20,
-        "solution": "function sumOfTwoNumbers(a, b) {\n    return a + b;\n}\n\nlet result = sumOfTwoNumbers(3, 5);",
+        "solution": "function sumOfTwoNumbers(a, b) {\n    return a + b;\n}\n\nlet result = sumOfTwoNumbers(3, 5);  \n document.getElementById('output').innerText = result;",
         "instructions": "Write a function that takes two numbers as input and returns their sum.",
         "expectedResult": "8"
     },
@@ -15,7 +15,7 @@
         "description": "Write a function that multiplies two numbers.",
         "difficulty": "Easy",
         "points": 20,
-        "solution": "function multiplyTwoNumbers(a, b) {\n    return a * b;\n}\n\nlet result = multiplyTwoNumbers(4, 6);",
+        "solution": "function multiplyTwoNumbers(a, b) {\n    return a * b;\n}\n\nlet result = multiplyTwoNumbers(4, 6);  \n document.getElementById('output').innerText = result;",
         "instructions": "Write a function that takes two numbers as input and returns their product.",
         "expectedResult": "24"
     },
@@ -25,7 +25,7 @@
         "description": "Write a function that returns the largest number between two numbers.",
         "difficulty": "Easy",
         "points": 20,
-        "solution": "function findLargest(a, b) {\n    return Math.max(a, b);\n}\n\nlet result = findLargest(10, 15);",
+        "solution": "function findLargest(a, b) {\n    return Math.max(a, b);\n}\n\nlet result = findLargest(10, 15);  \n document.getElementById('output').innerText = result;",
         "instructions": "Write a function that takes two numbers as input and returns the largest.",
         "expectedResult": "15"
     },
@@ -35,7 +35,7 @@
         "description": "Write a function that checks if a number is even.",
         "difficulty": "Easy",
         "points": 20,
-        "solution": "function isEven(n) {\n    return n % 2 === 0;\n}\n\nlet result = isEven(8);",
+        "solution": "function isEven(n) {\n    return n % 2 === 0;\n}\n\nlet result = isEven(8);  \n document.getElementById('output').innerText = result;",
         "instructions": "Write a function that takes a number as input and returns True if it is even, otherwise False.",
         "expectedResult": "True"
     },
@@ -45,7 +45,7 @@
         "description": "Write a function that checks if a number is greater than 10.",
         "difficulty": "Easy",
         "points": 20,
-        "solution": "function isGreaterThan10(n) {\n    return n > 10;\n}\n\nlet result = isGreaterThan10(12);",
+        "solution": "function isGreaterThan10(n) {\n    return n > 10;\n}\n\nlet result = isGreaterThan10(12);  \n document.getElementById('output').innerText = result;",
         "instructions": "Write a function that takes a number as input and returns True if it is greater than 10.",
         "expectedResult": "True"
     },
@@ -55,7 +55,7 @@
         "description": "Write a function that returns the square of a number.",
         "difficulty": "Medium",
         "points": 20,
-        "solution": "function squareNumber(n) {\n    return n * n;\n}\n\nlet result = squareNumber(4);",
+        "solution": "function squareNumber(n) {\n    return n * n;\n}\n\nlet result = squareNumber(4);  \n document.getElementById('output').innerText = result;",
         "instructions": "Write a function that takes a number as input and returns its square.",
         "expectedResult": "16"
     },
@@ -65,7 +65,7 @@
         "description": "Write a function that returns the sum of all numbers in a list.",
         "difficulty": "Medium",
         "points": 20,
-        "solution": "function sumOfList(arr) {\n    return arr.reduce((a, b) => a + b, 0);\n}\n\nlet result = sumOfList([1, 2, 3, 4]);",
+        "solution": "function sumOfList(arr) {\n    return arr.reduce((a, b) => a + b, 0);\n}\n\nlet result = sumOfList([1, 2, 3, 4]);  \n document.getElementById('output').innerText = result;",
         "instructions": "Write a function that takes a list as input and returns the sum of its elements.",
         "expectedResult": "10"
     },
@@ -75,7 +75,7 @@
         "description": "Write a function that counts the number of vowels in a string.",
         "difficulty": "Medium",
         "points": 20,
-        "solution": "function countVowels(s) {\n    return s.match(/[aeiou]/gi)?.length || 0;\n}\n\nlet result = countVowels('hello');",
+        "solution": "function countVowels(s) {\n    return s.match(/[aeiou]/gi)?.length || 0;\n}\n\nlet result = countVowels('hello');  \n document.getElementById('output').innerText = result;",
         "instructions": "Write a function that takes a string as input and returns the number of vowels.",
         "expectedResult": "2"
     },
@@ -85,7 +85,7 @@
         "description": "Write a function that reverses a list.",
         "difficulty": "Medium",
         "points": 20,
-        "solution": "function reverseList(arr) {\n    return arr.reverse();\n}\n\nlet result = reverseList([1, 2, 3]);",
+        "solution": "function reverseList(arr) {\n    return arr.reverse();\n}\n\nlet result = reverseList([1, 2, 3]);  \n document.getElementById('output').innerText = result;",
         "instructions": "Write a function that takes a list as input and returns the reversed list.",
         "expectedResult": "[3, 2, 1]"
     },
@@ -95,7 +95,7 @@
         "description": "Write a function that converts a string to uppercase.",
         "difficulty": "Medium",
         "points": 20,
-        "solution": "function toUppercase(s) {\n    return s.toUpperCase();\n}\n\nlet result = toUppercase('hello');",
+        "solution": "function toUppercase(s) {\n    return s.toUpperCase();\n}\n\nlet result = toUppercase('hello');  \n document.getElementById('output').innerText = result;",
         "instructions": "Write a function that takes a string as input and returns it in uppercase.",
         "expectedResult": "'HELLO'"
     },
@@ -105,7 +105,7 @@
         "description": "Write a function that checks if a number is positive.",
         "difficulty": "Medium",
         "points": 20,
-        "solution": "function isPositive(n) {\n    return n > 0;\n}\n\nlet result = isPositive(5);",
+        "solution": "function isPositive(n) {\n    return n > 0;\n}\n\nlet result = isPositive(5);  \n document.getElementById('output').innerText = result;",
         "instructions": "Write a function that takes a number as input and returns True if it is positive, otherwise False.",
         "expectedResult": "True"
     },
@@ -115,7 +115,7 @@
         "description": "Write a function that returns the smallest number between two numbers.",
         "difficulty": "Medium",
         "points": 20,
-        "solution": "function findSmallest(a, b) {\n    return Math.min(a, b);\n}\n\nlet result = findSmallest(10, 5);",
+        "solution": "function findSmallest(a, b) {\n    return Math.min(a, b);\n}\n\nlet result = findSmallest(10, 5);  \n document.getElementById('output').innerText = result;",
         "instructions": "Write a function that takes two numbers as input and returns the smallest.",
         "expectedResult": "5"
     },
@@ -125,7 +125,7 @@
         "description": "Write a function that converts a string to lowercase.",
         "difficulty": "Hard",
         "points": 20,
-        "solution": "function toLowercase(s) {\n    return s.toLowerCase();\n}\n\nlet result = toLowercase('HELLO');",
+        "solution": "function toLowercase(s) {\n    return s.toLowerCase();\n}\n\nlet result = toLowercase('HELLO');  \n document.getElementById('output').innerText = result;",
         "instructions": "Write a function that takes a string as input and returns it in lowercase.",
         "expectedResult": "'hello'"
     },
@@ -135,7 +135,7 @@
         "description": "Write a function that calculates the area of a rectangle.",
         "difficulty": "Hard",
         "points": 20,
-        "solution": "function rectangleArea(length, width) {\n    return length * width;\n}\n\nlet result = rectangleArea(4, 5);",
+        "solution": "function rectangleArea(length, width) {\n    return length * width;\n}\n\nlet result = rectangleArea(4, 5);  \n document.getElementById('output').innerText = result;",
         "instructions": "Write a function that takes the length and width of a rectangle as input and returns its area.",
         "expectedResult": "20"
     },
@@ -145,7 +145,7 @@
         "description": "Write a function that returns the remainder when one number is divided by another.",
         "difficulty": "Hard",
         "points": 20,
-        "solution": "function findRemainder(a, b) {\n    return a % b;\n}\n\nlet result = findRemainder(10, 3);",
+        "solution": "function findRemainder(a, b) {\n    return a % b;\n}\n\nlet result = findRemainder(10, 3);  \n document.getElementById('output').innerText = result;",
         "instructions": "Write a function that takes two numbers as input and returns the remainder when the first is divided by the second.",
         "expectedResult": "1"
     },
@@ -155,7 +155,7 @@
         "description": "Write a function that returns the average of a list of numbers.",
         "difficulty": "Hard",
         "points": 20,
-        "solution": "function findAverage(arr) {\n    return arr.reduce((a, b) => a + b, 0) / arr.length;\n}\n\nlet result = findAverage([1, 2, 3, 4]);",
+        "solution": "function findAverage(arr) {\n    return arr.reduce((a, b) => a + b, 0) / arr.length;\n}\n\nlet result = findAverage([1, 2, 3, 4]);  \n document.getElementById('output').innerText = result;",
         "instructions": "Write a function that takes a list as input and returns its average.",
         "expectedResult": "2.5"
     },
@@ -165,7 +165,7 @@
         "description": "Write a function that doubles a given number.",
         "difficulty": "Hard",
         "points": 20,
-        "solution": "function doubleNumber(n) {\n    return n * 2;\n}\n\nlet result = doubleNumber(7);",
+        "solution": "function doubleNumber(n) {\n    return n * 2;\n}\n\nlet result = doubleNumber(7);  \n document.getElementById('output').innerText = result;",
         "instructions": "Write a function that takes a number as input and returns its double.",
         "expectedResult": "14"
     },
@@ -175,7 +175,7 @@
         "description": "Write a function that converts Celsius to Fahrenheit.",
         "difficulty": "Hard",
         "points": 20,
-        "solution": "function celsiusToFahrenheit(c) {\n    return (c * 9/5) + 32;\n}\n\nlet result = celsiusToFahrenheit(0);",
+        "solution": "function celsiusToFahrenheit(c) {\n    return (c * 9/5) + 32;\n}\n\nlet result = celsiusToFahrenheit(0);  \n document.getElementById('output').innerText = result;",
         "instructions": "Write a function that takes temperature in Celsius as input and returns it in Fahrenheit.",
         "expectedResult": "32"
     },
@@ -185,7 +185,7 @@
         "description": "Write a function that counts the number of words in a string.",
         "difficulty": "Hard",
         "points": 20,
-        "solution": "function countWords(s) {\n    return s.split(' ').length;\n}\n\nlet result = countWords('hello world');",
+        "solution": "function countWords(s) {\n    return s.split(' ').length;\n}\n\nlet result = countWords('hello world');  \n document.getElementById('output').innerText = result;",
         "instructions": "Write a function that takes a string as input and returns the number of words.",
         "expectedResult": "2"
     },
@@ -195,7 +195,7 @@
         "description": "Write a function that converts minutes to seconds.",
         "difficulty": "Hard",
         "points": 20,
-        "solution": "function minutesToSeconds(minutes) {\n    return minutes * 60;\n}\n\nlet result = minutesToSeconds(5);",
+        "solution": "function minutesToSeconds(minutes) {\n    return minutes * 60;\n}\n\nlet result = minutesToSeconds(5);  \n document.getElementById('output').innerText = result;",
         "instructions": "Write a function that takes minutes as input and returns the equivalent in seconds.",
         "expectedResult": "300"
     }

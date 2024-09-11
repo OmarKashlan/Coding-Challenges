@@ -123,9 +123,14 @@ document.addEventListener('DOMContentLoaded', async function () {
 
         // التحقق من اللغة
         if (language === 'javascript') {
-            // عرض نافذة منبثقة بأن JavaScript تحت الصيانة
-            alert('عذرًا، لغة JavaScript حاليًا تحت الصيانة. يرجى المحاولة لاحقًا.');
-            return;  // عدم تشغيل الكود بعد عرض الرسالة
+            try {
+                // تشغيل كود JavaScript المدخل من المستخدم
+                let result = eval(code);  // استخدام eval لتنفيذ الكود
+                document.getElementById('output').innerText = result !== undefined ? result : 'Code executed successfully!';
+            } catch (error) {
+                // عرض رسالة خطأ في حال وجود خطأ في الكود
+                document.getElementById('output').innerText = `Error: ${error.message}`;
+            }
 
         } else if (language === 'html') {
             document.getElementById('output').innerHTML = code;
