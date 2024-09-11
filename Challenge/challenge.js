@@ -82,6 +82,26 @@ document.addEventListener('DOMContentLoaded', async function () {
     // تحميل القالب المناسب
     editor.setValue(defaultTemplate[language]);
 
+
+    // تعريف loggedInUser أولاً
+    let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+
+    if (!loggedInUser) {
+        alert('يجب عليك تسجيل الدخول لاستكمال التحديات.');
+        throw new Error('User is not logged in.');
+    }
+
+    let userAttempts = JSON.parse(localStorage.getItem(`attempts_${loggedInUser.name}_${challengeId}`)) || 0;
+
+    // زر "عرض الحل" يكون معطلاً في البداية فقط إذا كانت المحاولات أقل من 3
+    const showSolutionButton = document.getElementById('show-solution');
+    if (userAttempts < 3) {
+        showSolutionButton.disabled = true;
+    } else {
+        showSolutionButton.disabled = false;
+    }
+
+
     // زر تشغيل الكود
     const runCodeButton = document.getElementById('run-code');
     if (!runCodeButton) {
@@ -92,6 +112,14 @@ document.addEventListener('DOMContentLoaded', async function () {
     runCodeButton.addEventListener('click', function () {
         const code = editor.getValue();
         document.getElementById('output').innerText = "Running your code...";
+
+        userAttempts++;
+        localStorage.setItem(`attempts_${loggedInUser.name}_${challengeId}`, JSON.stringify(userAttempts));
+
+        // تحديث حالة زر "عرض الحل" بعد محاولة التشغيل
+        if (userAttempts >= 3) {
+            showSolutionButton.disabled = false;
+        }
 
         // التحقق من اللغة
         if (language === 'javascript') {
@@ -139,6 +167,19 @@ document.addEventListener('DOMContentLoaded', async function () {
             console.error('Error: jsonFile or challengeId is undefined.');
             return;
         }
+
+        const showSolutionButton = document.getElementById('show-solution');
+        if (userAttempts < 3) {
+            showSolutionButton.disabled = true;
+        } else {
+            showSolutionButton.disabled = false;
+        }
+
+        if (userAttempts < 3) {
+            alert('يجب عليك المحاولة ثلاث مرات على الأقل قبل عرض الحل.');
+            return;
+        }
+
 
         fetch(jsonFile)
             .then(response => response.json())

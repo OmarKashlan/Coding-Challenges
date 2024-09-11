@@ -142,5 +142,140 @@
         "points": 150,
         "solution": "<input type='text' id='inputText' placeholder='Enter text'><button onclick='findPalindrome()'>Find Palindrome</button><p id='result'></p><script>function findPalindrome() { const str = document.getElementById('inputText').value; if (str.length < 1) return ''; let start = 0, end = 0; for (let i = 0; i < str.length; i++) { let len1 = expandAroundCenter(str, i, i); let len2 = expandAroundCenter(str, i, i + 1); let len = Math.max(len1, len2); if (len > end - start) { start = i - Math.floor((len - 1) / 2); end = i + Math.floor(len / 2); } } document.getElementById('result').innerText = str.substring(start, end + 1); } function expandAroundCenter(s, left, right) { while (left >= 0 && right < s.length && s[left] === s[right]) { left--; right++; } return right - left - 1; }</script>",
         "instructions": "Write HTML and JavaScript that takes a string input and finds the longest palindromic substring."
+    },
+    {
+        "id": "create-html-header",
+        "title": "Create an HTML Header",
+        "description": "Write HTML to create a page header with the text 'Welcome to My Website'.",
+        "difficulty": "Easy",
+        "points": 50,
+        "solution": "<h1>Welcome to My Website</h1>",
+        "instructions": "Write HTML to create a page header with any text."
+    },
+    {
+        "id": "create-html-paragraph-bold",
+        "title": "Create a Paragraph with Bold Text",
+        "description": "Write HTML to create a paragraph with some bold text.",
+        "difficulty": "Easy",
+        "points": 50,
+        "solution": "<p>This is a <b>bold</b> text in a paragraph.</p>",
+        "instructions": "Write HTML to create a paragraph with part of the text bolded."
+    },
+    {
+        "id": "create-html-table-styled",
+        "title": "Create a Styled HTML Table",
+        "description": "Write HTML and CSS to create a table with styled borders and alternate row colors.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "<table style='border: 1px solid black;'><tr style='background-color: #f2f2f2;'><td>Row 1</td></tr><tr><td>Row 2</td></tr></table>",
+        "instructions": "Write HTML and CSS to create a styled table with borders and alternating row colors."
+    },
+    {
+        "id": "create-html-form-password",
+        "title": "Create a Form with Password Field",
+        "description": "Write HTML to create a form with fields for email and password.",
+        "difficulty": "Easy",
+        "points": 50,
+        "solution": "<form><input type='email' placeholder='Email'><br><input type='password' placeholder='Password'><br><input type='submit'></form>",
+        "instructions": "Write HTML to create a form with email and password fields."
+    },
+    {
+        "id": "create-html-list-nested",
+        "title": "Create a Nested List",
+        "description": "Write HTML to create a nested list with two levels of items.",
+        "difficulty": "Easy",
+        "points": 50,
+        "solution": "<ul><li>Item 1</li><li>Item 2<ul><li>Sub-item 1</li><li>Sub-item 2</li></ul></li></ul>",
+        "instructions": "Write HTML to create a nested list with two levels."
+    },
+    {
+        "id": "create-html-css-button",
+        "title": "Create a CSS Styled Button",
+        "description": "Write HTML and CSS to create a button that changes background color on hover.",
+        "difficulty": "Easy",
+        "points": 50,
+        "solution": "<button style='background-color: blue;' onmouseover=\"this.style.backgroundColor='red';\" onmouseout=\"this.style.backgroundColor='blue';\">Hover me</button>",
+        "instructions": "Write HTML and CSS to create a button that changes color on hover."
+    },
+    {
+        "id": "create-html-image-link",
+        "title": "Create an Image as a Link",
+        "description": "Write HTML to create an image that works as a hyperlink.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "<a href='https://www.example.com'><img src='https://www.example.com/image.jpg' alt='Example Image'></a>",
+        "instructions": "Write HTML to create an image that acts as a clickable link."
+    },
+    {
+        "id": "create-html-video-controls",
+        "title": "Embed a Video with Controls",
+        "description": "Write HTML to embed a video with play, pause, and volume controls.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "<video controls><source src='video.mp4' type='video/mp4'>Your browser does not support the video tag.</video>",
+        "instructions": "Write HTML to embed a video with controls."
+    },
+    {
+        "id": "create-html-multi-column-layout",
+        "title": "Create a Multi-Column Layout",
+        "description": "Write HTML and CSS to create a page layout with two columns.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "<div style='display: flex;'><div style='flex: 50%;'>Column 1</div><div style='flex: 50%;'>Column 2</div></div>",
+        "instructions": "Write HTML and CSS to create a two-column layout."
+    },
+    {
+        "id": "create-html-select-dropdown",
+        "title": "Create a Dropdown Select Menu",
+        "description": "Write HTML to create a select dropdown with three options.",
+        "difficulty": "Easy",
+        "points": 50,
+        "solution": "<select><option>Option 1</option><option>Option 2</option><option>Option 3</option></select>",
+        "instructions": "Write HTML to create a dropdown select menu with three options."
+    },
+    {
+        "id": "create-html-textarea",
+        "title": "Create a Textarea",
+        "description": "Write HTML to create a textarea input with placeholder text.",
+        "difficulty": "Easy",
+        "points": 50,
+        "solution": "<textarea placeholder='Enter your message here'></textarea>",
+        "instructions": "Write HTML to create a textarea with placeholder text."
+    },
+    {
+        "id": "create-html-alert-button",
+        "title": "Create a Button that Triggers an Alert",
+        "description": "Write HTML and JavaScript to create a button that shows an alert with a message when clicked.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "<button onclick='alert(\"Hello!\")'>Click Me</button>",
+        "instructions": "Write HTML and JavaScript to create a button that shows an alert when clicked."
+    },
+    {
+        "id": "create-html-tooltip",
+        "title": "Create a Tooltip",
+        "description": "Write HTML and CSS to create a tooltip that appears when hovering over a text.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "<span style='position: relative;'>Hover over me<span style='visibility: hidden; position: absolute; background-color: #000; color: #fff;'>Tooltip text</span></span>",
+        "instructions": "Write HTML and CSS to create a tooltip that appears on hover."
+    },
+    {
+        "id": "create-html-css-card",
+        "title": "Create a Styled Card",
+        "description": "Write HTML and CSS to create a card element with an image and text.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "<div style='border: 1px solid black; padding: 20px;'><img src='https://www.example.com/image.jpg' alt='Example Image'><p>This is a card with an image.</p></div>",
+        "instructions": "Write HTML and CSS to create a styled card with an image and text."
+    },
+    {
+        "id": "create-html-css-grid-layout",
+        "title": "Create a Grid Layout",
+        "description": "Write HTML and CSS to create a grid layout with three columns.",
+        "difficulty": "Hard",
+        "points": 150,
+        "solution": "<div style='display: grid; grid-template-columns: auto auto auto;'><div>Item 1</div><div>Item 2</div><div>Item 3</div></div>",
+        "instructions": "Write HTML and CSS to create a grid layout with three columns."
     }
 ]
