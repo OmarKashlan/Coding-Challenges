@@ -277,5 +277,194 @@
         "points": 150,
         "solution": "<div style='display: grid; grid-template-columns: auto auto auto;'><div>Item 1</div><div>Item 2</div><div>Item 3</div></div>",
         "instructions": "Write HTML and CSS to create a grid layout with three columns."
+    },
+    {
+        "id": "create-html-footer",
+        "title": "Create a Footer",
+        "description": "Write HTML to create a footer with the text '© 2024 My Website'.",
+        "difficulty": "Easy",
+        "points": 50,
+        "solution": "<footer>© 2024 My Website</footer>",
+        "instructions": "Write HTML to create a footer with any text."
+    },
+    {
+        "id": "create-html-heading-hierarchy",
+        "title": "Create a Heading Hierarchy",
+        "description": "Write HTML to create headings from H1 to H6 with different text for each.",
+        "difficulty": "Easy",
+        "points": 50,
+        "solution": "<h1>Heading 1</h1><h2>Heading 2</h2><h3>Heading 3</h3><h4>Heading 4</h5><h6>Heading 6</h6>",
+        "instructions": "Write HTML to create headings from H1 to H6 with any text."
+    },
+    {
+        "id": "create-html-image-gallery",
+        "title": "Create an Image Gallery",
+        "description": "Write HTML and CSS to create a simple image gallery with three images in a row.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "<div style='display: flex;'><img src='img1.jpg'><img src='img2.jpg'><img src='img3.jpg'></div>",
+        "instructions": "Write HTML and CSS to create an image gallery."
+    },
+    {
+        "id": "create-html-file-upload",
+        "title": "Create a File Upload",
+        "description": "Write HTML to create a form with a file upload input.",
+        "difficulty": "Easy",
+        "points": 50,
+        "solution": "<form><input type='file'></form>",
+        "instructions": "Write HTML to create a form with a file upload input."
+    },
+    {
+        "id": "create-html-progress-bar",
+        "title": "Create a Progress Bar",
+        "description": "Write HTML to create a progress bar with a value of 50.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "<progress value='50' max='100'></progress>",
+        "instructions": "Write HTML to create a progress bar."
+    },
+    {
+        "id": "create-html-audio-player",
+        "title": "Embed an Audio Player",
+        "description": "Write HTML to embed an audio player with a source.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "<audio controls><source src='audio.mp3' type='audio/mpeg'>Your browser does not support the audio element.</audio>",
+        "instructions": "Write HTML to embed an audio player."
+    },
+    {
+        "id": "create-html-blockquote",
+        "title": "Create a Blockquote",
+        "description": "Write HTML to create a blockquote with a citation.",
+        "difficulty": "Easy",
+        "points": 50,
+        "solution": "<blockquote cite='https://example.com'>This is a blockquote.</blockquote>",
+        "instructions": "Write HTML to create a blockquote."
+    },
+    {
+        "id": "create-html-map",
+        "title": "Embed a Google Map",
+        "description": "Write HTML to embed a Google Map using an iframe.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "<iframe src='https://maps.google.com/maps?q=New York&t=&z=13&ie=UTF8&iwloc=&output=embed'></iframe>",
+        "instructions": "Write HTML to embed a Google Map."
+    },
+    {
+        "id": "create-html-table-styled-headers",
+        "title": "Style Table Headers",
+        "description": "Write HTML and CSS to style the headers of a table with bold and background color.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "<table><thead><tr><th style='background-color: #f2f2f2; font-weight: bold;'>Header 1</th><th style='background-color: #f2f2f2; font-weight: bold;'>Header 2</th></tr></thead><tbody><tr><td>Row 1, Column 1</td><td>Row 1, Column 2</td></tr></tbody></table>",
+        "instructions": "Write HTML and CSS to style table headers."
+    },
+    {
+        "id": "create-html-collapsible",
+        "title": "Create a Collapsible Section",
+        "description": "Write HTML and JavaScript to create a collapsible section that shows/hides content on button click.",
+        "difficulty": "Hard",
+        "points": 150,
+        "solution": "<button onclick='toggleContent()'>Toggle</button><div id='content' style='display: none;'>This is hidden content.</div><script>function toggleContent() { const content = document.getElementById('content'); content.style.display = content.style.display === 'none' ? 'block' : 'none'; }</script>",
+        "instructions": "Write HTML and JavaScript to create a collapsible section."
+    },
+    {
+        "id": "create-html-toggle-switch",
+        "title": "Create a Toggle Switch",
+        "description": "Write HTML and CSS to create a toggle switch for light/dark mode.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "<label class='switch'><input type='checkbox'><span class='slider'></span></label><style>.switch { position: relative; display: inline-block; width: 60px; height: 34px; } .slider { position: absolute; cursor: pointer; }</style>",
+        "instructions": "Write HTML and CSS to create a toggle switch."
+    },
+    {
+        "id": "create-html-hover-effect",
+        "title": "Create a Hover Effect",
+        "description": "Write HTML and CSS to create a hover effect that changes the background color of a div.",
+        "difficulty": "Easy",
+        "points": 50,
+        "solution": "<div style='width: 100px; height: 100px; background-color: blue;' onmouseover=\"this.style.backgroundColor='red';\" onmouseout=\"this.style.backgroundColor='blue';\"></div>",
+        "instructions": "Write HTML and CSS to create a hover effect."
+    },
+    {
+        "id": "create-html-modal",
+        "title": "Create a Modal",
+        "description": "Write HTML and CSS to create a modal popup that opens and closes on button click.",
+        "difficulty": "Hard",
+        "points": 150,
+        "solution": "<button onclick='openModal()'>Open Modal</button><div id='modal' style='display: none;'><div style='background-color: white; padding: 20px;'>This is a modal.<button onclick='closeModal()'>Close</button></div></div><script>function openModal() { document.getElementById('modal').style.display = 'block'; } function closeModal() { document.getElementById('modal').style.display = 'none'; }</script>",
+        "instructions": "Write HTML, CSS, and JavaScript to create a modal popup."
+    },
+    {
+        "id": "create-html-search-bar",
+        "title": "Create a Search Bar",
+        "description": "Write HTML to create a search bar with a submit button.",
+        "difficulty": "Easy",
+        "points": 50,
+        "solution": "<form><input type='text' placeholder='Search...'><button type='submit'>Search</button></form>",
+        "instructions": "Write HTML to create a search bar."
+    },
+    {
+        "id": "create-html-custom-checkbox",
+        "title": "Create a Custom Checkbox",
+        "description": "Write HTML and CSS to create a custom checkbox with a checkmark.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "<label><input type='checkbox' class='custom-checkbox'> Check me</label><style>.custom-checkbox { appearance: none; background-color: #f2f2f2; width: 20px; height: 20px; }</style>",
+        "instructions": "Write HTML and CSS to create a custom checkbox."
+    },
+    {
+        "id": "create-html-social-media-icons",
+        "title": "Add Social Media Icons",
+        "description": "Write HTML and CSS to add social media icons with links to external sites.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "<a href='https://twitter.com'><img src='twitter.png' alt='Twitter'></a><a href='https://facebook.com'><img src='facebook.png' alt='Facebook'></a>",
+        "instructions": "Write HTML and CSS to add social media icons with links."
+    },
+    {
+        "id": "create-html-radio-button-group",
+        "title": "Create a Radio Button Group",
+        "description": "Write HTML to create a group of radio buttons with three options.",
+        "difficulty": "Easy",
+        "points": 50,
+        "solution": "<form><input type='radio' name='option' value='1'> Option 1<br><input type='radio' name='option' value='2'> Option 2<br><input type='radio' name='option' value='3'> Option 3</form>",
+        "instructions": "Write HTML to create a group of radio buttons."
+    },
+    {
+        "id": "create-html-favicon",
+        "title": "Add a Favicon",
+        "description": "Write HTML to add a favicon to a webpage.",
+        "difficulty": "Easy",
+        "points": 50,
+        "solution": "<link rel='icon' href='favicon.ico' type='image/x-icon'>",
+        "instructions": "Write HTML to add a favicon."
+    },
+    {
+        "id": "create-html-css-breadcrumb",
+        "title": "Create a Breadcrumb Navigation",
+        "description": "Write HTML and CSS to create a breadcrumb navigation.",
+        "difficulty": "Medium",
+        "points": 100,
+        "solution": "<nav><ul><li><a href='#'>Home</a></li> / <li><a href='#'>Category</a></li> / <li>Product</li></ul></nav>",
+        "instructions": "Write HTML and CSS to create a breadcrumb navigation."
+    },
+    {
+        "id": "create-html-css-parallax",
+        "title": "Create a Parallax Effect",
+        "description": "Write HTML and CSS to create a parallax scrolling effect.",
+        "difficulty": "Hard",
+        "points": 150,
+        "solution": "<div class='parallax'></div><style>.parallax { background-image: url('image.jpg'); height: 500px; background-attachment: fixed; }</style>",
+        "instructions": "Write HTML and CSS to create a parallax effect."
+    },
+    {
+        "id": "create-html-css-toggle-navigation",
+        "title": "Create a Toggleable Navigation",
+        "description": "Write HTML, CSS, and JavaScript to create a toggleable navigation menu.",
+        "difficulty": "Hard",
+        "points": 150,
+        "solution": "<button onclick='toggleNav()'>Toggle Menu</button><nav id='nav' style='display: none;'>Menu Items</nav><script>function toggleNav() { const nav = document.getElementById('nav'); nav.style.display = nav.style.display === 'none' ? 'block' : 'none'; }</script>",
+        "instructions": "Write HTML, CSS, and JavaScript to create a toggleable navigation menu."
     }
 ]
