@@ -72,6 +72,15 @@ document.addEventListener('DOMContentLoaded', async function () {
         mode: (language === 'html') ? 'text/x-html' : 'javascript',
         theme: 'default'
     });
+    
+
+    editor.on('keyup', function (cm, event) {
+        if (!cm.state.completionActive && /* لا تقم بتشغيله إذا كان نشطًا بالفعل */
+            (event.keyCode >= 65 && event.keyCode <= 90 || event.keyCode === 190)) { // تأكد أن الكود يتم تشغيله فقط للحروف أو النقطة.
+            CodeMirror.commands.autocomplete(cm, null, { completeSingle: false });
+        }
+    });
+    
 
     // تعيين القالب الافتراضي بناءً على اللغة
     const defaultTemplate = {
