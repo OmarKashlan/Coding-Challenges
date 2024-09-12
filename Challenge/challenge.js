@@ -86,6 +86,20 @@ document.addEventListener('DOMContentLoaded', async function () {
     });
 
 
+    document.addEventListener('DOMContentLoaded', function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const language = urlParams.get('lang') || 'javascript';
+
+        if (language === 'javascript') {
+            // انتظار 15 ثانية قبل عرض الـ popup
+            setTimeout(function () {
+                var modal = new bootstrap.Modal(document.getElementById('pointsModal'));
+                modal.show();
+            }, 2000); // 15 ثانية
+        }
+    });
+
+
     // تعيين القالب الافتراضي بناءً على اللغة
     const defaultTemplate = {
         javascript: `// Write your JavaScript solution here\n`,
