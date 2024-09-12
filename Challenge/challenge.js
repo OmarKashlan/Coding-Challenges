@@ -66,17 +66,19 @@ document.addEventListener('DOMContentLoaded', async function () {
         })
         .catch(error => console.error('Error loading challenges:', error));
 
-    // إعداد CodeMirror Editor
+    // إعداد CodeMirror Editor بناءً على اللغة
+    let mode = (language === 'html') ? 'htmlmixed' : 'javascript';
     editor = CodeMirror.fromTextArea(document.getElementById('code-editor'), {
         lineNumbers: true,
-        mode: (language === 'html') ? 'text/x-html' : 'javascript',
-        theme: 'default'
+        mode: mode,  // التبديل بين HTML و JavaScript
+        theme: 'default',
+        extraKeys: {
+            "Ctrl-Space": "autocomplete"  // لتفعيل الإكمال التلقائي عند الضغط على Ctrl + Space
+        }
     });
-    
 
     editor.on('keyup', function (cm, event) {
-        if (!cm.state.completionActive && /* لا تقم بتشغيله إذا كان نشطًا بالفعل */
-            (event.keyCode >= 65 && event.keyCode <= 90 || event.keyCode === 190)) { // تأكد أن الكود يتم تشغيله فقط للحروف أو النقطة.
+        if (!cm.state.completionActive && (event.keyCode >= 65 && event.keyCode <= 90 || event.keyCode === 190 || event.keyCode === 60)) {
             CodeMirror.commands.autocomplete(cm, null, { completeSingle: false });
         }
     });
@@ -100,7 +102,8 @@ document.addEventListener('DOMContentLoaded', async function () {
         throw new Error('User is not logged in.');
     }
 
-    let userAttempts = JSON.parse(localStorage.getItem(`attempts_${loggedInUser.name}_${challengeId}`)) || 0;
+    localStorage.setItem(`attempts_${loggedInUser.name}_${challengeId}`, JSON.stringify(0));
+    let userAttempts = 0;
 
     // زر "عرض الحل" يكون معطلاً في البداية فقط إذا كانت المحاولات أقل من 3
     const showSolutionButton = document.getElementById('show-solution');
