@@ -70,19 +70,21 @@ document.addEventListener('DOMContentLoaded', async function () {
     let mode = (language === 'html') ? 'htmlmixed' : 'javascript';
     editor = CodeMirror.fromTextArea(document.getElementById('code-editor'), {
         lineNumbers: true,
-        mode: mode,  // التبديل بين HTML و JavaScript
+        mode: mode, // التبديل بين HTML و JavaScript
         theme: 'default',
         extraKeys: {
-            "Ctrl-Space": "autocomplete"  // لتفعيل الإكمال التلقائي عند الضغط على Ctrl + Space
+            "Ctrl-Space": "autocomplete" // لتفعيل الإكمال التلقائي عند الضغط على Ctrl + Space
         }
     });
 
     editor.on('keyup', function (cm, event) {
         if (!cm.state.completionActive && (event.keyCode >= 65 && event.keyCode <= 90 || event.keyCode === 190 || event.keyCode === 60)) {
-            CodeMirror.commands.autocomplete(cm, null, { completeSingle: false });
+            CodeMirror.commands.autocomplete(cm, null, {
+                completeSingle: false
+            });
         }
     });
-    
+
 
     // تعيين القالب الافتراضي بناءً على اللغة
     const defaultTemplate = {
@@ -137,7 +139,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         if (language === 'javascript') {
             try {
                 // تشغيل كود JavaScript المدخل من المستخدم
-                let result = eval(code);  // استخدام eval لتنفيذ الكود
+                let result = eval(code); // استخدام eval لتنفيذ الكود
                 document.getElementById('output').innerText = result !== undefined ? result : 'Code executed successfully!';
             } catch (error) {
                 // عرض رسالة خطأ في حال وجود خطأ في الكود
@@ -242,7 +244,10 @@ function addPointsToUser(points) {
     if (userIndex >= 0) {
         leaderboard[userIndex].points += points;
     } else {
-        leaderboard.push({ user: loggedInUser.name, points: points });
+        leaderboard.push({
+            user: loggedInUser.name,
+            points: points
+        });
     }
 
     localStorage.setItem('leaderboard', JSON.stringify(leaderboard));

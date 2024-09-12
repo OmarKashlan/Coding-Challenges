@@ -1,7 +1,8 @@
 // بيانات تجريبية للمتصدرين
-const leaderboardData = [
-    { user: 'لا يوجد بيانات حالياً', points: 0 }
-];
+const leaderboardData = [{
+    user: 'لا يوجد بيانات حالياً',
+    points: 0
+}];
 
 // تحميل المتصدرين عند تحميل الصفحة
 document.addEventListener('DOMContentLoaded', function () {

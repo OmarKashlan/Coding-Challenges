@@ -53,7 +53,6 @@
 
 /* End of Navbar */
 
-
 /* Content */
 body {
     background-color: #e9f5f9;
@@ -124,7 +123,6 @@ body {
 }
 
 @media (max-width: 768px) {
-
     .card {
         margin-bottom: 1rem;
     }
@@ -135,8 +133,6 @@ body {
         vertical-align: middle;
         flex-wrap: wrap;
     }
-
-
 
     .card-body {
         text-align: center;
@@ -175,7 +171,6 @@ body {
     }
 }
 
-
 .fade-out {
     opacity: 1;
     transition: opacity 0.3s ease-out;
@@ -202,8 +197,6 @@ body {
     }
 }
 
-
-
 #scroll-to-top {
     position: fixed;
     bottom: 20px;
@@ -216,7 +209,6 @@ body {
 #scroll-to-top.show {
     display: block;
 }
-
 
 /* Spinner Container */
 .spinner-container {
@@ -249,7 +241,6 @@ body {
 }
 
 /* End of Content */
-
 
 /* Footer */
 footer {
